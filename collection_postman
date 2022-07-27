@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "3d26afaf-f07e-4acb-9398-5b379d958fd9",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3369708"
+	},
+	"item": [
+		{
+			"name": "GET_USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/user/0/10/user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"0",
+						"10",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Joko Parmono",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "joko@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "csrf_token",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/user/create",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "POST",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/user/4/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"4",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Hadi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hadi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/user/4/update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"4",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_DETAILS_USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/user/4/details",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"4",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://testapi.test",
+			"type": "string"
+		}
+	]
+}
